@@ -18,6 +18,12 @@
             ]
         },
         {
+            "route": "/api/*",
+            "allowedRoles": [
+                "authenticated"
+            ]
+        },
+        {
             "route": "/.auth/login/aad/callback",
             "redirect": "/index.html"
         },
