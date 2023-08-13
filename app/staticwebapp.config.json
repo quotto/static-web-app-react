@@ -12,6 +12,12 @@
     },
     "routes": [
         {
+            "route": "/index.html",
+            "allowedRoles": [
+                "authenticated"
+            ]
+        },
+        {
             "route": "/.auth/login/aad/callback",
             "redirect": "/index.html"
         },
@@ -24,7 +30,7 @@
         {
             "route": "/*",
             "allowedRoles": [
-                "authenticated"
+                "anonymous"
             ]
         }
     ],
