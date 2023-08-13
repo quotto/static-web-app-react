@@ -9,7 +9,7 @@ function App() {
     const data = await res.json();
     // レスポンスの表示
     console.log(data);
-    setResponse(data.data);
+    setResponse(data);
   };
   let response, setResponse = useState('');
   const value = 'World';
@@ -18,6 +18,9 @@ function App() {
     <p>Hello {value}</p>
     <button onClick={()=>sendApiRequest()}>Click me</button>
     <p>{response}</p>
+    <p>
+      <a href="/.auth/logout">Logout</a>
+    </p>
   </div>);
 }
 
