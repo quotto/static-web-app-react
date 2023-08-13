@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function App() {
   // APIリクエストを送信する関数
@@ -9,12 +9,15 @@ function App() {
     const data = await res.json();
     // レスポンスの表示
     console.log(data);
+    setResponse(data.data);
   };
+  let response, setResponse = useState('');
   const value = 'World';
   return (
   <div>
     <p>Hello {value}</p>
     <button onClick={()=>sendApiRequest()}>Click me</button>
+    <p>{response}</p>
   </div>);
 }
 
